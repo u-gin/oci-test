@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oci-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: oci-demo
+  template:
+    metadata:
+      labels:
+        app: oci-demo
+    spec: 
+      containers:
+      - name: app
+        image: ghcr.io/u-gin/oci-test:1.0
+        ports:
+        - containerPort: 5000
