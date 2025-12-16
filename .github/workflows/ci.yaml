@@ -29,7 +29,7 @@ jobs:
 
         - name: Verify image
           run: |
-            docker run ghcr.io/u-gin/oci-demo:${IMAGE_TAG} app.py 
+            docker run ghcr.io/u-gin/oci-demo:${IMAGE_TAG} python --version
         
         - name: Push image to GitHub Container Registry
           run: |
